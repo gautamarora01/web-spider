@@ -39,7 +39,7 @@ function spiderLinks(currentUrl, body, nesting, cb){
 
     if(nesting === 0){ //no more recursion 
         return process.nextTick(cb);
-        //we cannot directly call cb() (migh cause zalgo bug, if it's async)
+        //we cannot directly call cb() (migh cause zalgo bug, if it's sync)
     }
 
     const links = getPageLinks(currentUrl, body);
